@@ -202,8 +202,8 @@ summary {
 </div>
 <div id="neck" class="section level1">
 <h1>NECK</h1>
-<div id="model-length-neck-this-is-an-example" class="section level2">
-<h2>Model LENGTH ~ NECK this is an example</h2>
+<div id="model-length-neck" class="section level2">
+<h2>Model LENGTH ~ NECK</h2>
 <pre class="r"><code>simp &lt;- lm(LENGTH~NECK,data=bears)
 plot(LENGTH~NECK,data=bears)
 abline(simp)</code></pre>
@@ -419,9 +419,12 @@ predict(simpCT,new,se.fit=TRUE)</code></pre>
 ## $residual.scale
 ## [1] 4.939419</code></pre>
 </div>
-<div id="surely-there-is-another-variable-that-can-better-predict-length-than-neck.-find-one-and-compare-its-performance-to-that-of-neck-by-it-value-of-adjusted-rsquared-bigger-is-better." class="section level2">
-<h2>Surely there is another variable that can better predict LENGTH than NECK. Find one and compare its performance to that of neck by it value of Adjusted-Rsquared (bigger is better).</h2>
 </div>
+<div id="conclusions" class="section level1">
+<h1>CONCLUSIONS</h1>
+<p>The best model was based on HEADLEN as seen by the adjusted R-squared, the prediction of the length for bears 5, 15, and 23 is 70.31, 51.94, 58.83.</p>
+<p>The actual lengths of the bears was 62, 52, 54.</p>
+<p>The error in prediction for bear number 5 is about 8 inches, for bear 15 the perdiction is right on, for bear number 23 the error in prediction is just under 6 inches.</p>
 </div>
 
 
