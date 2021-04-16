@@ -5,16 +5,19 @@ date: "Spring 2021"
 output:
     html_document:
       toc: true
+---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 # Bears regression model
 ### make a simple regression model- read in the data
         
 ```{r}
 bears <- read.csv(file="BEARS.csv",header = TRUE)
 ```
+
 # NECK
 ## Model LENGTH ~ NECK   
 
@@ -23,6 +26,7 @@ simp <- lm(LENGTH~NECK,data=bears)
 plot(LENGTH~NECK,data=bears)
 abline(simp)
 summary.lm(simp)
+```
 
 ```{r}
 new <- data.frame(NECK=bears$NECK [c(5,15,23)])
@@ -101,7 +105,7 @@ The best model was based on HEADLEN as seen by the adjusted R-squared, the predi
 70.31, 51.94, 58.83.  
 
 The actual lengths of the bears was
-`r bears$LENGTH[c(5, 15, 23)]`.  
+`r bears$LENGTH[c(5, 15, 23)]`. 
 
 
-The error in prediction for bear number 5 is about 8 inches, for bear 15 the perdiction is right on, for bear number 23 the error in prediction is just under 6 inches.
+The error in prediction for bear number 5 is about 8 inches, for bear 15 the prediction is right on, for bear number 23 the error in prediction is just under 6 inches.
